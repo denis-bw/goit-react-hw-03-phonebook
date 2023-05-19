@@ -33,7 +33,6 @@ export class ContactForm extends Component {
 
 
     handleChangeInput = (e) => {
-    e.preventDefault();
     const {name, value} = e.currentTarget;
 
     this.setState({

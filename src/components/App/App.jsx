@@ -28,15 +28,6 @@ export class App extends Component  {
     }
   }
 
-  componentWillUnmount() {
-    const contactList = localStorage.getItem("constactList")
-    if (contactList) {
-      this.setState(
-        {contacts: JSON.parse(contactList)}
-      )
-    }
-  }
-
   handleSubmitForm = (contactName, contactsNumber) => {
 
     const equalName = this.state.contacts.find(contact => contactName.value.toUpperCase() === contact.name.toUpperCase()) 
